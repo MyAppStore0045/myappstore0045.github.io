@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App Store - Uygulama Dünyası</title>
+
+    <style>
+        /* Genel Ayarlar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Açık gri arka plan */
+            color: #333; /* Koyu gri yazı rengi */
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden; /* İçerik taşmasını engeller */
+            padding: 20px 0;
+        }
+
+        /* Başlık Alanı (Header) */
+        header {
+            background: #333; /* Koyu gri arka plan */
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Hafif gölge */
+        }
+
+        header h1 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease; /* Renk geçişi efekti */
+        }
+
+        header nav ul li a:hover {
+            color: #007bff; /* Mavi tonu */
+        }
+
+        /* Kahraman Bölümü (Hero Section) */
+        .hero {
+            background: #007bff; /* Canlı mavi arka plan */
+            color: #fff;
+            text-align: center;
+            padding: 60px 0;
+            margin-bottom: 30px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #28a745; /* Yeşil buton */
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #218838;
+        }
+
+        /* Uygulama Kartları (Apps Grid) */
+        .apps-grid {
+            padding: 40px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .apps-grid h2 {
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        .app-card {
+            background: #fdfdfd;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px;
+            display: inline-block; /* Yan yana sıralama */
+            width: calc(33% - 60px); /* 3 sütunlu düzen (telefonlarda farklı olabilir) */
+            vertical-align: top;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px); /* Hafif yukarı kalkma efekti */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .app-card h3 {
+            margin: 10px 0;
+            color: #007bff;
+        }
+
+        .app-card p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: #6c757d; /* Gri tonu */
+            color: #fff;
+            padding: 8px 18px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+
+        .download-button:hover {
+            background: #5a6268;
+        }
+
+        /* Hakkımızda ve İletişim Bölümleri */
+        .about-us, .contact-us {
+            padding: 40px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-us {
+            background-color: #e9ecef; /* Açık gri */
+        }
+
+        .contact-us {
+            background-color: #fff;
+        }
+
+        .about-us h2, .contact-us h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-us p, .contact-us p {
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+            color: #555;
+        }
+
+        .contact-us a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-us a:hover {
+            text-decoration: underline;
+        }
+
+        /* Alt Bilgi (Footer) */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        /* Mobil Uyum (Responsive) Ayarlar */
+        @media (max-width: 768px) {
+            .app-card {
+                width: calc(50% - 30px); /* Tabletler için 2 sütun */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .app-card {
+                width: calc(100% - 30px); /* Telefonlar için tek sütun */
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>My App Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#apps">Uygulamalar</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Dijital Dünyanın Kapısı</h2>
+                <p>En yeni ve popüler mobil uygulamaları keşfedin, indirin ve deneyimleyin!</p>
+                <a href="#apps" class="button">Uygulamaları Keşfet</a>
+            </div>
+        </section>
+
+        <section id="apps" class="apps-grid">
+            <div class="container">
+                <h2>Uygulamalarımız</h2>
+
+                <div class="app-card">
+                    <h3>Google Earth</h3>
+                    <p>Dünyayı keşfedin! Google Earth ile evinizden çıkmadan gezegenin herhangi bir yerine uçun, uydu görüntülerini, haritaları ve arazileri keşfedin.</p>
+                    <a href="https://drive.google.com/uc?export=download&id=1HaXPJjF2pKGX2JbDWFlPDuLY593KeEUA" target="_blank" class="download-button">APK İndir</a>
+                </div>
+
+                <div class="app-card">
+                    <h3>3D Mekanlar</h3>
+                    <p>Farklı coğrafyalardaki ikonik yapıları ve doğal güzellikleri 3 boyutlu olarak keşfedin. Gerçeküstü bir deneyimle dünyayı sanal ortamda gezin.</p>
+                    <a href="https://drive.google.com/file/d/1Hf5Gqp0TBh6trz6EZf4ASYk30Xgz2EXu/view?usp=drivesdk" target="_blank" class="download-button">APK İndir</a>
+                </div>
+
+                </div>
+        </section>
+
+        <section id="about" class="about-us">
+            <div class="container">
+                <h2>Hakkımızda</h2>
+                <p>My App Store olarak, en iyi ve en yenilikçi mobil uygulamaları kullanıcılarımızla buluşturmayı hedefliyoruz. Geliştiricilerin yaratıcılıklarını desteklerken, kullanıcılarımıza güvenli ve zengin bir uygulama deneyimi sunuyoruz.</p>
+                <p>Amacımız, ihtiyaçlarınıza uygun, eğlenceli ve verimli uygulamaları kolayca bulmanızı sağlamaktır.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-us">
+            <div class="container">
+                <h2>İletişim</h2>
+                <p>Bizimle iletişime geçmek için aşağıdaki bilgileri kullanabilirsiniz:</p>
+                <p>Email: <a href="mailto:myappstore.0045@gmail.com">myappstore.0045@gmail.com</a></p>
+                <p>Sosyal Medya: <a href="https://twitter.com/myappstore" target="_blank">Twitter</a> | <a href="https://facebook.com/myappstore" target="_blank">Facebook</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My App Store. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
