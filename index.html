@@ -118,6 +118,7 @@
             vertical-align: top;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left; /* Kart içindeki metni sola yasla */
         }
 
         .app-card:hover {
@@ -128,6 +129,7 @@
         .app-card h3 {
             margin: 10px 0;
             color: #007bff;
+            text-align: center; /* Başlığı ortaya al */
         }
 
         .app-card p {
@@ -136,8 +138,9 @@
             margin-bottom: 20px;
         }
 
+        /* APK İndir Butonu Stili (tek buton olduğu için yan yana ayarları kaldırıldı) */
         .download-button {
-            display: inline-block;
+            display: inline-block; /* Inline block olarak kalabilir veya block olabilir */
             background: #6c757d; /* Gri tonu */
             color: #fff;
             padding: 8px 18px;
@@ -145,11 +148,13 @@
             border-radius: 4px;
             font-size: 0.9em;
             transition: background 0.3s ease;
+            margin-top: 15px; /* Üstündeki açıklamayla boşluk */
         }
 
         .download-button:hover {
             background: #5a6268;
         }
+
 
         /* Hakkımızda ve İletişim Bölümleri */
         .about-us, .contact-us {
@@ -188,7 +193,7 @@
             text-decoration: underline;
         }
 
-        /* Yeni Ek Dosya Bölümü */
+        /* Ek Dosya Bölümü */
         .extra-files {
             padding: 40px 0;
             text-align: center;
@@ -266,9 +271,9 @@
                 <h2>Uygulamalarımız</h2>
 
                 <div class="app-card">
-                    <h3>Google Earth</h3>
-                    <p>Dünyayı keşfedin! Google Earth ile evinizden çıkmadan gezegenin herhangi bir yerine uçun, uydu görüntülerini, haritaları ve arazileri keşfedin.</p>
-                    <a href="https://drive.google.com/uc?export=download&id=1HaXPJjF2pKGX2JbDWFlPDuLY593KeEUA" target="_blank" class="download-button">APK İndir</a>
+                    <h3>Bitdefender Antivirus</h3>
+                    <p>Cihazınızı virüslere, kötü amaçlı yazılımlara ve diğer siber tehditlere karşı koruyun. Bitdefender'ın güçlü güvenlik özellikleriyle mobil cihazınız güvende kalsın.</p>
+                    <a href="https://dosya.co/t3jezyycyj5e/Antivirus_Free.apk.html" target="_blank" class="download-button">APK İndir</a>
                 </div>
 
                 <div class="app-card">
