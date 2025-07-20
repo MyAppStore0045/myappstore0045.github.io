@@ -157,7 +157,7 @@
 
 
         /* Hakkımızda ve İletişim Bölümleri */
-        .about-us, .contact-us {
+        .about-us, .contact-us, .how-to-install { /* Yeni bölüm için stil eklendi */
             padding: 40px 0;
             text-align: center;
             margin-bottom: 30px;
@@ -171,25 +171,29 @@
             background-color: #fff;
         }
 
-        .about-us h2, .contact-us h2 {
+        .how-to-install { /* Yeni bölümün arka planı */
+            background-color: #e9ecef;
+        }
+
+        .about-us h2, .contact-us h2, .how-to-install h2 { /* Yeni bölüm başlığı için stil eklendi */
             font-size: 2em;
             margin-bottom: 20px;
             color: #333;
         }
 
-        .about-us p, .contact-us p {
+        .about-us p, .contact-us p, .how-to-install p { /* Yeni bölüm paragrafı için stil eklendi */
             max-width: 800px;
             margin: 0 auto 15px auto;
             color: #555;
         }
 
-        .contact-us a {
+        .contact-us a, .how-to-install a, .footer-menu a { /* Yeni bölümdeki ve footer linki için stil eklendi */
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .contact-us a:hover {
+        .contact-us a:hover, .how-to-install a:hover, .footer-menu a:hover { /* Yeni bölümdeki ve footer link hover efekti */
             text-decoration: underline;
         }
 
@@ -219,6 +223,19 @@
             padding: 20px 0;
             font-size: 0.9em;
         }
+
+        .footer-menu { /* Yeni footer menü stili */
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0; /* Alttan biraz boşluk */
+            display: inline-block; /* Ortalamak için */
+        }
+
+        .footer-menu li {
+            display: inline;
+            margin: 0 10px;
+        }
+
 
         /* Mobil Uyum (Responsive) Ayarlar */
         @media (max-width: 768px) {
@@ -252,7 +269,7 @@
                     <li><a href="#apps">Uygulamalar</a></li>
                     <li><a href="#about">Hakkımızda</a></li>
                     <li><a href="#contact">İletişim</a></li>
-                </ul>
+                    </ul>
             </nav>
         </div>
     </header>
@@ -316,13 +333,7 @@
             </div>
         </section>
 
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 My App Store. Tüm Hakları Saklıdır.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+        <section id="how-to-install" class="how-to-install">
+            <div class="container">
+                <h2>En Akta Nasıl Uygulama Yüklenir?</h2>
+                <p>Uygulamaları cihazınıza nasıl
